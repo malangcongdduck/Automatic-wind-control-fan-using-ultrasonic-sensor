@@ -1,0 +1,21 @@
+body {
+    background-color: #B9E2FA;
+}
+.container {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main {
+    display: flex; /* CSS의 새로운 레이아웃 방식인 flexbox 사용 */
+}
+.main div {
+    flex:1;
+}
+.main div button {
+    background-color: #64AAFF;
+    width:150px;
+    height:80px;
+    border-radius: 10px;
+}
+    

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HOME NETWORK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Ultrasonic sensor fan</h2> <!-- div 태그는 웹 페이지의 레이아웃(전제적인 틀)을 만들 때 사용됨 -->
+        </div>
+        <div class="main">
+            <div>
+                <button onclick="fan_on()">fan on</button>
+            </div>
+            <div>
+                <button onclick="fan_off()">fan off</button>
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+<script>
+    function fan_on(){
+        fetch("/fan/on")
+        result.innerHTML = "<h1>Running mode</h1>";
+    }
+
+    function fan_off(){
+        fetch("/fan/off")
+        result.innerHTML = "<h1>-Stop-</h1>";
+    }
+</script>
+</body>
+</html>
